@@ -4,6 +4,7 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -11,10 +12,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lostandfound.viewReportSceneController">
+<AnchorPane prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.lostandfound.viewReportAdminSceneController">
    <children>
       <TextArea fx:id="targetDescription_TA" editable="false" layoutX="14.0" layoutY="57.0" prefHeight="113.0" prefWidth="351.0" wrapText="true" />
-      <Label alignment="CENTER" layoutX="386.0" layoutY="5.0" prefHeight="17.0" prefWidth="200.0" text="Date Reported:" />
+      <Label fx:id="date_status_lbl" alignment="CENTER" layoutX="386.0" layoutY="5.0" prefHeight="17.0" prefWidth="200.0" text="Date:" />
       <TextArea fx:id="targetLoc_TA" editable="false" layoutX="15.0" layoutY="425.0" prefHeight="38.0" prefWidth="343.0" wrapText="true" />
       <DatePicker fx:id="targetDate_dt" layoutX="386.0" layoutY="26.0" prefHeight="25.0" prefWidth="200.0" />
       <Label alignment="CENTER" layoutX="386.0" layoutY="81.0" prefHeight="35.0" prefWidth="200.0" text="Report Type :">
@@ -53,7 +54,18 @@
             </Text>
          </children>
       </Pane>
-      <Button layoutX="492.0" layoutY="335.0" mnemonicParsing="false" onAction="#onRejectReportButton" prefHeight="25.0" prefWidth="74.0" text="Reject" textFill="#bf1111" />
-      <Button layoutX="407.0" layoutY="335.0" mnemonicParsing="false" onAction="#onApproveReportButton" prefHeight="25.0" prefWidth="74.0" text="Approve" textFill="#1ac300" />
+      <Button fx:id="id_RejectReportButton" layoutX="492.0" layoutY="335.0" mnemonicParsing="false" onAction="#onRejectReportButton" prefHeight="25.0" prefWidth="74.0" text="Reject" textFill="#bf1111" />
+      <Button fx:id="id_ApproveReportButton" layoutX="407.0" layoutY="335.0" mnemonicParsing="false" onAction="#onApproveReportButton" prefHeight="25.0" prefWidth="74.0" text="Approve" textFill="#1ac300" />
+      <Button fx:id="id_ResolvedReportButton" layoutX="434.0" layoutY="377.0" mnemonicParsing="false" onAction="#onResolvedReportButton" text="mark as resolved" textFill="#0dbbdd" />
+      <Label alignment="CENTER" layoutX="91.0" layoutY="7.0" prefHeight="20.0" prefWidth="273.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="reported_item_post_id_txtField" alignment="CENTER" editable="false" layoutX="79.0" layoutY="25.0" prefHeight="25.0" prefWidth="286.0">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>
